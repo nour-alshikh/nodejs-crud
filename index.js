@@ -26,10 +26,6 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/products", productsRoute);
 app.use("/api/users", usersRoute);
 
-app.get("/", (req, res) => {
-  res.send("Hello World!");
-});
-
 app.use((req, res) => {
   return res.status(404).json({
     status: FAIL,
